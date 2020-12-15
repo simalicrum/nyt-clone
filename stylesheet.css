@@ -17,6 +17,7 @@
   grid-template-columns: 34px 34px auto 1fr auto auto;
   justify-items: center;
   align-items: center;
+  z-index: 2;
 }
 
 .button {
@@ -45,15 +46,13 @@
 #subject-title {
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 14.25px;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
 }
 
 #title-logo {
   width: 184px;
   height: 25px;
-}
-
-article {
-  padding-top: 20px;
 }
 
 #social-header {
@@ -93,6 +92,7 @@ article {
   padding: 4px;
   position: relative;
   width: auto;
+  z-index: -1;
 }
 
 #comment-number::before {
@@ -120,13 +120,14 @@ article {
 }
 
 article {
+  padding-top: 40px;
   display: grid;
   grid-template-columns:
-    auto minmax(auto, 240px) minmax(auto, 60px) minmax(auto, 600px) minmax(
+    auto minmax(auto, 127.5px) minmax(auto, 172.5px) minmax(auto, 600px) minmax(
       auto,
-      60px
+      172.5px
     )
-    minmax(auto, 240px)
+    minmax(auto, 127.5px)
     auto;
 }
 
@@ -134,19 +135,33 @@ header {
   grid-column: 2 / 7;
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr minmax(auto, 600px) 1fr;
+  grid-template-columns: 1fr minmax(500px, 600px) 1fr;
 }
 
 header h1 {
+  color: rgb(18, 18, 18);
   grid-column: 2 / 3;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: italic;
 }
 
 figure {
   margin: 0px;
-  grid-column: 1 / 4;
 }
 
 #head-figure {
+  grid-column: 1 / 4;
+}
+
+figcaption {
+  font-size: 16px;
+  color: rgb(102, 102, 102);
+}
+
+.fig-credit {
+  font-size: 13px;
+  color: rgb(136, 136, 136);
 }
 
 #head-img {
@@ -155,38 +170,116 @@ figure {
 
 #author {
   grid-column: 2 / 3;
+  color: rgb(51, 51, 51);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 #article-date {
   grid-column: 2 / 3;
+  color: rgb(51, 51, 51);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
 }
 
 #article-content {
   grid-column: 3 / 6;
   display: grid;
-  grid-template-columns: 1fr 600px 1fr;
+  grid-template-columns: 1fr minmax(auto, 112.5px) 600px minmax(auto, 112.5px) 1fr;
 }
 
 #article-content p {
-  grid-column-start: 2;
+  color: rgb(51, 51, 51);
+  grid-column: 3 / 4;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+#story {
+  grid-column: 1 / 6;
+}
+
+#story-title {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-style: normal;
+  font-family: nyt-cheltenham, georgia, times new roman, times, serif;
+  margin-bottom: 2px;
+}
+
+#summary-text {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  font-family: nyt-cheltenham-sh, georgia, times new roman, times, serif;
+  color: #666;
+}
+
+#inflation-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-image: url("inflation-945.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.cap-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.cap1,
+.cap2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.cap-1 {
+  grid-row-start: 2;
+}
+
+.cap-2 {
+  grid-row-start: 4;
+}
+
+#inflation {
+  width: 100%;
+  grid-column: 1 / 5;
+  grid-row: 1 / 5;
 }
 
 #mid-figure {
-  grid-column: 1 / 4;
+  grid-column: 2 / 5;
 }
 
 #mid-img {
   width: 100%;
 }
 
+#video {
+  grid-column: 3 / 4;
+}
+
 footer {
   grid-column: 4 / 5;
   display: grid;
+  grid-gap: 20px;
   grid-template-columns: 330px 1fr auto;
 }
 
 #footer-desc {
   grid-column: 1 / 4;
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #social-footer {
