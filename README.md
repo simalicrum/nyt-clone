@@ -1,6 +1,6 @@
 # nyt-clone
 
-A clone of a New York Times Article in plain HTML, CSS and a bit of JS.
+A clone of a New York Times Article in plain HTML and CSS.
 
 Live server: [https://simalicrum.github.io/nyt-clone/](https://simalicrum.github.io/nyt-clone/)
 
